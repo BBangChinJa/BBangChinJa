@@ -41,6 +41,8 @@
 		1A8C29C02BF1BBC6000DE695 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29BF2BF1BBC6000DE695 /* FirebaseStorage */; };
 		1A8C29C32BF1BD62000DE695 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29C22BF1BD62000DE695 /* Alamofire */; };
 		1A8C29C52BF1BD62000DE695 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29C42BF1BD62000DE695 /* AlamofireDynamic */; };
+		1A8C29C72BF20308000DE695 /* BBangChinJa++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29C62BF20308000DE695 /* BBangChinJa++Bundle.swift */; };
+		1A8C29C92BF20418000DE695 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A8C29C82BF20418000DE695 /* Secrets.plist */; };
 		F146F9A5C768067254DF8F7F /* Pods_BBangChinJa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		1A8C29962BF1B8BF000DE695 /* MangoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoDetailViewModel.swift; sourceTree = "<group>"; };
 		1A8C29982BF1B8C9000DE695 /* RateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModel.swift; sourceTree = "<group>"; };
 		1A8C29B82BF1BB7A000DE695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A8C29C62BF20308000DE695 /* BBangChinJa++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BBangChinJa++Bundle.swift"; sourceTree = "<group>"; };
+		1A8C29C82BF20418000DE695 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		6CBBCDAB94A2514904481530 /* Pods-BBangChinJa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.release.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.release.xcconfig"; sourceTree = "<group>"; };
 		70E5A3A6DA6FC6863CD3B26C /* Pods-BBangChinJa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.debug.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBangChinJa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,7 @@
 				1A74B7732BECBDCB008F58AD /* Assets.xcassets */,
 				1A74B7752BECBDCB008F58AD /* LaunchScreen.storyboard */,
 				1A74B7782BECBDCB008F58AD /* Info.plist */,
+				1A8C29C82BF20418000DE695 /* Secrets.plist */,
 			);
 			path = BBangChinJa;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		1A8C297B2BF1B56E000DE695 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1A8C29C62BF20308000DE695 /* BBangChinJa++Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8C29C92BF20418000DE695 /* Secrets.plist in Resources */,
 				1A74B7772BECBDCB008F58AD /* LaunchScreen.storyboard in Resources */,
 				1A74B7742BECBDCB008F58AD /* Assets.xcassets in Resources */,
 				1A8C29B92BF1BB7A000DE695 /* GoogleService-Info.plist in Resources */,
@@ -369,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8C29C72BF20308000DE695 /* BBangChinJa++Bundle.swift in Sources */,
 				1A8C29812BF1B7EE000DE695 /* MangoModel.swift in Sources */,
 				1A8C29872BF1B85E000DE695 /* BreadDetailView.swift in Sources */,
 				1A8C29932BF1B8A6000DE695 /* BreadDetailViewModel.swift in Sources */,
