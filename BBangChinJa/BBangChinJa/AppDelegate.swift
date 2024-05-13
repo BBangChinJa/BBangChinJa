@@ -12,10 +12,11 @@ import NMapsMap
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+	let id = Bundle.main.idKey
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		FirebaseApp.configure()
-		NMFAuthManager.shared().clientId = "ybkzrvowft"
+		NMFAuthManager.shared().clientId = id
 		return true
 	}
 
