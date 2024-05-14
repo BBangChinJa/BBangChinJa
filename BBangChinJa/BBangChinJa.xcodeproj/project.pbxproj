@@ -43,6 +43,8 @@
 		1A8C29CF2BF211B0000DE695 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29CE2BF211B0000DE695 /* RateViewController.swift */; };
 		1A8C29D42BF213B8000DE695 /* MangoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D32BF213B8000DE695 /* MangoDetailViewController.swift */; };
 		1A8C29D62BF213DF000DE695 /* BreadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D52BF213DF000DE695 /* BreadDetailViewController.swift */; };
+		88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FD2BF349CC002258C7 /* DataModel.swift */; };
+		88B75A002BF34E30002258C7 /* FireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FF2BF34E30002258C7 /* FireStore.swift */; };
 		F146F9A5C768067254DF8F7F /* Pods_BBangChinJa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		1A8C29D52BF213DF000DE695 /* BreadDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadDetailViewController.swift; sourceTree = "<group>"; };
 		6CBBCDAB94A2514904481530 /* Pods-BBangChinJa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.release.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.release.xcconfig"; sourceTree = "<group>"; };
 		70E5A3A6DA6FC6863CD3B26C /* Pods-BBangChinJa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.debug.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.debug.xcconfig"; sourceTree = "<group>"; };
+		88B759FD2BF349CC002258C7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		88B759FF2BF34E30002258C7 /* FireStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FireStore.swift; path = BBangChinJa/Model/FireStore.swift; sourceTree = SOURCE_ROOT; };
 		CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBangChinJa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +151,7 @@
 				1A8C297E2BF1B7D7000DE695 /* BreadModel.swift */,
 				1A8C29802BF1B7EE000DE695 /* MangoModel.swift */,
 				1A8C298C2BF1B878000DE695 /* RateModel.swift */,
+				88B759FD2BF349CC002258C7 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 		1A8C29D02BF21364000DE695 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				88B759FF2BF34E30002258C7 /* FireStore.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			files = (
 				1A8C29C72BF20308000DE695 /* BBangChinJa++Bundle.swift in Sources */,
 				1A8C29812BF1B7EE000DE695 /* MangoModel.swift in Sources */,
+				88B75A002BF34E30002258C7 /* FireStore.swift in Sources */,
 				1A8C29932BF1B8A6000DE695 /* BreadDetailViewModel.swift in Sources */,
 				1A8C29CB2BF21049000DE695 /* MangoViewController.swift in Sources */,
 				1A8C29992BF1B8C9000DE695 /* RateViewModel.swift in Sources */,
@@ -413,6 +420,7 @@
 				1A8C29D42BF213B8000DE695 /* MangoDetailViewController.swift in Sources */,
 				1A8C29CD2BF21188000DE695 /* BreadViewController.swift in Sources */,
 				1A8C297F2BF1B7D7000DE695 /* BreadModel.swift in Sources */,
+				88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */,
 				1A8C29CF2BF211B0000DE695 /* RateViewController.swift in Sources */,
 				1A8C29912BF1B89A000DE695 /* BreadViewModel.swift in Sources */,
 				1A8C29952BF1B8B3000DE695 /* MangoViewModel.swift in Sources */,
