@@ -15,7 +15,7 @@ class NetworkManager {
 	
 	func searchBakeries(completion: @escaping (Result<Data, Error>) -> Void) {
 		let query = "글루텐 프리 빵"
-		let urlString = "https://openapi.naver.com/v1/search/local.json?query=\(query)&display=10&start=1"
+		let urlString = "https://openapi.naver.com/v1/search/local.json?query=\(query)&display=10&start=1&sort=random"
 		
 		let headers: HTTPHeaders = [
 			"X-Naver-Client-Id": "searchId",
