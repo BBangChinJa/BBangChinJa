@@ -13,6 +13,6 @@ struct Review: Codable {
     var userID: String
     var title: String
     var stars: Int
-    var imageURL: [String]
+    var imageURL: String
     var comments: String
 }

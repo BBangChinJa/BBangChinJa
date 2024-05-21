@@ -39,15 +39,24 @@ class ReviewManager {
             return
         }
         
+        let newReview = ReviewManager.shared.db.collection("users").document(userID).collection("reviews").document()
+        
         do {
-            try db.collection("users").document(userID).collection("reviews").addDocument(from: review) { error in
+            try newReview.setData(from: review) { error in
                 if let error = error {
+                    print("Error adding document: \(error)")
                     completion(error)
                 } else {
+                    self.fetchReview { (review, error) in
+                        if let error = error {
+                            print("Error fetching reviews after adding a new review: \(error)")
+                        }
+                    }
                     completion(nil)
                 }
             }
         } catch {
+            print("Error adding document: \(error)")
             completion(error)
         }
     }
@@ -59,7 +68,7 @@ class ReviewManager {
             return
         }
         
-        listener = db.collection("users").document(userID).collection("reviews").addSnapshotListener { (querySnapshot, error) in
+        let listener = db.collection("users").document(userID).collection("reviews").addSnapshotListener { (querySnapshot, error) in
             if let error = error {
                 completion(nil, error)
             } else {
@@ -69,40 +78,35 @@ class ReviewManager {
                         reviews.append(review)
                     }
                 }
+                completion(reviews, nil)
             }
         }
     }
     
-    
     //MARK: 리뷰 삭제
-    func deleteReview(reviewID: String, imageURL: [String], completion: @escaping (Error?) -> Void) {
+    func deleteReview(reviewID: String, imageURL: String, completion: @escaping (Error?) -> Void) {
         guard let userID = getUserID() else {
             completion(NSError(domain: "Auth Error", code: 401, userInfo: nil))
             return
         }
-        
-        // 사진 지우는 코드 추가하기
         let dispatch = DispatchGroup()
         
+        dispatch.enter()
+        ImageManager.deleteImage(urlString: imageURL) { error in
+            if let error = error {
+                print("Error deleting image from Firebase Storage: \(error)")
+            }
+            dispatch.leave()
+        }
+        
         dispatch.notify(queue: .main) {
-            self.db.collection("users").document(userID).collection("reviews").getDocuments { (querySnapshot, error) in
+            self.db.collection("users").document(userID).collection("reviews").document(reviewID).delete { error in
                 if let error = error {
                     print("Error deleting document: \(error)")
                     completion(error)
                 } else {
-                    let dispatch = DispatchGroup()
-                    for document in querySnapshot!.documents {
-                        dispatch.enter()
-                        document.reference.delete { error in
-                            if let error = error {
-                                print("Error deleting document: \(error)")
-                            }
-                            dispatch.leave()
-                        }
-                    }
-                    dispatch.notify(queue: .main) {
-                        completion(nil)
-                    }
+                    print("Review document successfully deleted")
+                    completion(nil)
                 }
             }
         }
