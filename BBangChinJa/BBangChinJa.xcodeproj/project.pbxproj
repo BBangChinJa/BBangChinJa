@@ -49,6 +49,19 @@
 		1A8C29DF2BF3388C000DE695 /* Pods_BBangChinJa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; };
 		1A8C29E02BF3388C000DE695 /* Pods_BBangChinJa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A8C29E22BF3428E000DE695 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29E12BF3428E000DE695 /* String+Extension.swift */; };
+		1A8C29E52C045E25000DE695 /* KakaoMapsSDK-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29E42C045E25000DE695 /* KakaoMapsSDK-SPM */; };
+		1A8C29E82C0460B1000DE695 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29E72C0460B1000DE695 /* KakaoSDK */; };
+		1A8C29EA2C0460B1000DE695 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29E92C0460B1000DE695 /* KakaoSDKAuth */; };
+		1A8C29EC2C0460B1000DE695 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29EB2C0460B1000DE695 /* KakaoSDKCert */; };
+		1A8C29EE2C0460B1000DE695 /* KakaoSDKCertCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29ED2C0460B1000DE695 /* KakaoSDKCertCore */; };
+		1A8C29F02C0460B1000DE695 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29EF2C0460B1000DE695 /* KakaoSDKCommon */; };
+		1A8C29F22C0460B1000DE695 /* KakaoSDKFriend in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F12C0460B1000DE695 /* KakaoSDKFriend */; };
+		1A8C29F42C0460B1000DE695 /* KakaoSDKFriendCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F32C0460B1000DE695 /* KakaoSDKFriendCore */; };
+		1A8C29F62C0460B1000DE695 /* KakaoSDKNavi in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F52C0460B1000DE695 /* KakaoSDKNavi */; };
+		1A8C29F82C0460B1000DE695 /* KakaoSDKShare in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F72C0460B1000DE695 /* KakaoSDKShare */; };
+		1A8C29FA2C0460B1000DE695 /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F92C0460B1000DE695 /* KakaoSDKTalk */; };
+		1A8C29FC2C0460B1000DE695 /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29FB2C0460B1000DE695 /* KakaoSDKTemplate */; };
+		1A8C29FE2C0460B1000DE695 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29FD2C0460B1000DE695 /* KakaoSDKUser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,21 +117,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8C299E2BF1B96A000DE695 /* SnapKit in Frameworks */,
+				1A8C29E52C045E25000DE695 /* KakaoMapsSDK-SPM in Frameworks */,
 				1A8C29C32BF1BD62000DE695 /* Alamofire in Frameworks */,
 				1A8C29DF2BF3388C000DE695 /* Pods_BBangChinJa.framework in Frameworks */,
 				1A8C29AB2BF1BAD2000DE695 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1A8C29A02BF1B96A000DE695 /* SnapKit-Dynamic in Frameworks */,
+				1A8C29EA2C0460B1000DE695 /* KakaoSDKAuth in Frameworks */,
 				1A8C29A52BF1BAD2000DE695 /* FirebaseAnalytics in Frameworks */,
 				1A8C29B12BF1BAD2000DE695 /* FirebaseAuth in Frameworks */,
+				1A8C29FC2C0460B1000DE695 /* KakaoSDKTemplate in Frameworks */,
 				1A8C29BC2BF1BBC6000DE695 /* FirebaseFirestore in Frameworks */,
 				1A8C29C52BF1BD62000DE695 /* AlamofireDynamic in Frameworks */,
 				1A8C29B52BF1BAD2000DE695 /* FirebaseCrashlytics in Frameworks */,
+				1A8C29FA2C0460B1000DE695 /* KakaoSDKTalk in Frameworks */,
+				1A8C29FE2C0460B1000DE695 /* KakaoSDKUser in Frameworks */,
+				1A8C29F02C0460B1000DE695 /* KakaoSDKCommon in Frameworks */,
 				1A8C29BE2BF1BBC6000DE695 /* FirebaseFirestoreSwift in Frameworks */,
 				1A8C29AD2BF1BAD2000DE695 /* FirebaseAppCheck in Frameworks */,
 				1A8C29A72BF1BAD2000DE695 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				1A8C29A92BF1BAD2000DE695 /* FirebaseAnalyticsSwift in Frameworks */,
+				1A8C29F62C0460B1000DE695 /* KakaoSDKNavi in Frameworks */,
 				1A8C29C02BF1BBC6000DE695 /* FirebaseStorage in Frameworks */,
+				1A8C29F22C0460B1000DE695 /* KakaoSDKFriend in Frameworks */,
 				1A8C29AF2BF1BAD2000DE695 /* FirebaseAppDistribution-Beta in Frameworks */,
+				1A8C29F82C0460B1000DE695 /* KakaoSDKShare in Frameworks */,
+				1A8C29F42C0460B1000DE695 /* KakaoSDKFriendCore in Frameworks */,
+				1A8C29E82C0460B1000DE695 /* KakaoSDK in Frameworks */,
+				1A8C29EC2C0460B1000DE695 /* KakaoSDKCert in Frameworks */,
+				1A8C29EE2C0460B1000DE695 /* KakaoSDKCertCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +348,19 @@
 				1A8C29BF2BF1BBC6000DE695 /* FirebaseStorage */,
 				1A8C29C22BF1BD62000DE695 /* Alamofire */,
 				1A8C29C42BF1BD62000DE695 /* AlamofireDynamic */,
+				1A8C29E42C045E25000DE695 /* KakaoMapsSDK-SPM */,
+				1A8C29E72C0460B1000DE695 /* KakaoSDK */,
+				1A8C29E92C0460B1000DE695 /* KakaoSDKAuth */,
+				1A8C29EB2C0460B1000DE695 /* KakaoSDKCert */,
+				1A8C29ED2C0460B1000DE695 /* KakaoSDKCertCore */,
+				1A8C29EF2C0460B1000DE695 /* KakaoSDKCommon */,
+				1A8C29F12C0460B1000DE695 /* KakaoSDKFriend */,
+				1A8C29F32C0460B1000DE695 /* KakaoSDKFriendCore */,
+				1A8C29F52C0460B1000DE695 /* KakaoSDKNavi */,
+				1A8C29F72C0460B1000DE695 /* KakaoSDKShare */,
+				1A8C29F92C0460B1000DE695 /* KakaoSDKTalk */,
+				1A8C29FB2C0460B1000DE695 /* KakaoSDKTemplate */,
+				1A8C29FD2C0460B1000DE695 /* KakaoSDKUser */,
 			);
 			productName = BBangChinJa;
 			productReference = 1A74B7672BECBDC8008F58AD /* BBangChinJa.app */;
@@ -355,6 +394,8 @@
 				1A8C299C2BF1B96A000DE695 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1A8C29A32BF1BAD2000DE695 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1A8C29C12BF1BD62000DE695 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1A8C29E32C045E25000DE695 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */,
+				1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 1A74B7682BECBDC8008F58AD /* Products */;
 			projectDirPath = "";
@@ -687,6 +728,22 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		1A8C29E32C045E25000DE695 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao-mapsSDK/KakaoMapsSDK-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.5;
+			};
+		};
+		1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -764,6 +821,71 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1A8C29C12BF1BD62000DE695 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		1A8C29E42C045E25000DE695 /* KakaoMapsSDK-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E32C045E25000DE695 /* XCRemoteSwiftPackageReference "KakaoMapsSDK-SPM" */;
+			productName = "KakaoMapsSDK-SPM";
+		};
+		1A8C29E72C0460B1000DE695 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		1A8C29E92C0460B1000DE695 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		1A8C29EB2C0460B1000DE695 /* KakaoSDKCert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCert;
+		};
+		1A8C29ED2C0460B1000DE695 /* KakaoSDKCertCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCertCore;
+		};
+		1A8C29EF2C0460B1000DE695 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		1A8C29F12C0460B1000DE695 /* KakaoSDKFriend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKFriend;
+		};
+		1A8C29F32C0460B1000DE695 /* KakaoSDKFriendCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKFriendCore;
+		};
+		1A8C29F52C0460B1000DE695 /* KakaoSDKNavi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKNavi;
+		};
+		1A8C29F72C0460B1000DE695 /* KakaoSDKShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKShare;
+		};
+		1A8C29F92C0460B1000DE695 /* KakaoSDKTalk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKTalk;
+		};
+		1A8C29FB2C0460B1000DE695 /* KakaoSDKTemplate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKTemplate;
+		};
+		1A8C29FD2C0460B1000DE695 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8C29E62C0460B1000DE695 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
