@@ -44,6 +44,7 @@
 		1A8C29D42BF213B8000DE695 /* MangoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D32BF213B8000DE695 /* MangoDetailViewController.swift */; };
 		1A8C29D62BF213DF000DE695 /* BreadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D52BF213DF000DE695 /* BreadDetailViewController.swift */; };
 		881F80292BFB4161001993C7 /* FireStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F80282BFB4161001993C7 /* FireStorage.swift */; };
+		8880CF8D2BFDEB2400DE2414 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8880CF8C2BFDEB2400DE2414 /* LoginViewController.swift */; };
 		88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FD2BF349CC002258C7 /* DataModel.swift */; };
 		88B75A002BF34E30002258C7 /* FireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FF2BF34E30002258C7 /* FireStore.swift */; };
 		F146F9A5C768067254DF8F7F /* Pods_BBangChinJa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; };
@@ -76,6 +77,8 @@
 		6CBBCDAB94A2514904481530 /* Pods-BBangChinJa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.release.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.release.xcconfig"; sourceTree = "<group>"; };
 		70E5A3A6DA6FC6863CD3B26C /* Pods-BBangChinJa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBangChinJa.debug.xcconfig"; path = "Target Support Files/Pods-BBangChinJa/Pods-BBangChinJa.debug.xcconfig"; sourceTree = "<group>"; };
 		881F80282BFB4161001993C7 /* FireStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FireStorage.swift; path = BBangChinJa/Model/FireStorage.swift; sourceTree = SOURCE_ROOT; };
+		8880CF8B2BFDE75200DE2414 /* BBangChinJa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBangChinJa.entitlements; sourceTree = "<group>"; };
+		8880CF8C2BFDEB2400DE2414 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88B759FD2BF349CC002258C7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		88B759FF2BF34E30002258C7 /* FireStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FireStore.swift; path = BBangChinJa/Model/FireStore.swift; sourceTree = SOURCE_ROOT; };
 		CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBangChinJa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +132,11 @@
 		1A74B7692BECBDC8008F58AD /* BBangChinJa */ = {
 			isa = PBXGroup;
 			children = (
+				8880CF8B2BFDE75200DE2414 /* BBangChinJa.entitlements */,
 				1A8C29D02BF21364000DE695 /* DB */,
 				1A8C29772BF1B42E000DE695 /* Networking */,
 				1A8C297B2BF1B56E000DE695 /* Extensions */,
+				8880CF902C045B1B00DE2414 /* Service */,
 				1A74B77E2BECBDFA008F58AD /* Model */,
 				1A8C297A2BF1B454000DE695 /* ViewModel */,
 				1A8C29792BF1B44D000DE695 /* View */,
@@ -269,6 +274,14 @@
 				6CBBCDAB94A2514904481530 /* Pods-BBangChinJa.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8880CF902C045B1B00DE2414 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8880CF8C2BFDEB2400DE2414 /* LoginViewController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8880CF8D2BFDEB2400DE2414 /* LoginViewController.swift in Sources */,
 				1A8C29C72BF20308000DE695 /* BBangChinJa++Bundle.swift in Sources */,
 				1A8C29812BF1B7EE000DE695 /* MangoModel.swift in Sources */,
 				88B75A002BF34E30002258C7 /* FireStore.swift in Sources */,
@@ -571,6 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBangChinJa/BBangChinJa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -600,6 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBangChinJa/BBangChinJa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
