@@ -10,8 +10,6 @@ import AuthenticationServices
 import SnapKit
 
 class LoginViewController: UIViewController {
-
-    
     private lazy var signInButton: ASAuthorizationAppleIDButton = {
         let signInButton = ASAuthorizationAppleIDButton(type: .signIn, style: .whiteOutline)
         signInButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: UIControl.Event.touchUpInside)
@@ -56,10 +54,28 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
         return self.view.window!
     }
     
+    //로그인 성공
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             let userId = appleIDCredential.user
+            
+            if let authorizationCode = appleIDCredential.authorizationCode,
+               let identityToken = appleIDCredential.identityToken,
+               let authCodeString = String(data: authorizationCode, encoding: .utf8),
+               let identifyTokenString = String(data: identityToken, encoding: .utf8) {
+                print("authorizationCode: \(authorizationCode)")
+                print("identityToken: \(identityToken)")
+                print("authCodeString: \(authCodeString)")
+                print("identifyTokenString: \(identifyTokenString)")
+            }
+            print("userId: \(userId)")
         }
     }
-
+    
+    //로그인 실패
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("login failed - \(error.localizedDescription)")
+    }
+    
+    //자동 로그인
 }
