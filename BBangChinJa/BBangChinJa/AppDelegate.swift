@@ -9,14 +9,17 @@ import UIKit
 
 import FirebaseCore
 import NMapsMap
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	let id = Bundle.main.idKey
+	let kakaoId = Bundle.main.kakao
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		FirebaseApp.configure()
 		NMFAuthManager.shared().clientId = id
+		KakaoSDK.initSDK(appKey: kakaoId)
 		return true
 	}
 	

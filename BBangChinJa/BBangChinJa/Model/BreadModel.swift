@@ -4,19 +4,15 @@
 //
 //  Created by Dahlia on 5/13/24.
 //
-
 import Foundation
 
-import Firebase
-import FirebaseFirestore
+struct NaverSearchResponse: Codable {
+	let items: [Bread]
+}
 
-class StarsManager {
-    static let shared = StarsManager()
-    let db = Firestore.firestore()
-    var listener: ListenerRegistration?
-    
-    deinit {
-        listener?.remove()
-    }
-    
+struct Bread: Codable {
+	let title: String
+	let address: String
+	let mapx: String
+	let mapy: String
 }
