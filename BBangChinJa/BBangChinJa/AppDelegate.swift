@@ -17,9 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	let kakaoId = Bundle.main.kakao
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		if #available(iOS 15.0, *) {
+			let appearance = UITabBarAppearance()
+			appearance.configureWithOpaqueBackground()
+			
+			//바꾸고 싶은 색으로 backgroundColor를 설정
+			UITabBar.appearance().backgroundColor = UIColor.white
+		}
+		
 		FirebaseApp.configure()
 		NMFAuthManager.shared().clientId = id
-		KakaoSDK.initSDK(appKey: kakaoId)
+//		KakaoSDK.initSDK(appKey: kakaoId)
 		return true
 	}
 	

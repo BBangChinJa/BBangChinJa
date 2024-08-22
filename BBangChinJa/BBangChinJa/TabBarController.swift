@@ -17,10 +17,14 @@ class TabBarController: UITabBarController {
 		
 		let rateViewController = RateViewController()
 		
-		breadViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-		mangoViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-		rateViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+		breadViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Bread"), tag: 0)
+		mangoViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Drink"), tag: 1)
+		rateViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Star"), tag: 2)
 		
 		viewControllers = [breadViewController, mangoViewController, rateViewController]
+		tabBar.isTranslucent = false
+
+		tabBar.tintColor = .gray
+		tabBar.unselectedItemTintColor = .lightGray
 	}
 }

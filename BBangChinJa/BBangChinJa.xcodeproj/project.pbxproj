@@ -42,11 +42,6 @@
 		1A8C29CF2BF211B0000DE695 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29CE2BF211B0000DE695 /* RateViewController.swift */; };
 		1A8C29D42BF213B8000DE695 /* MangoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D32BF213B8000DE695 /* MangoDetailViewController.swift */; };
 		1A8C29D62BF213DF000DE695 /* BreadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D52BF213DF000DE695 /* BreadDetailViewController.swift */; };
-		881F80292BFB4161001993C7 /* FireStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F80282BFB4161001993C7 /* FireStorage.swift */; };
-		8880CF8D2BFDEB2400DE2414 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8880CF8C2BFDEB2400DE2414 /* LoginViewController.swift */; };
-		88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FD2BF349CC002258C7 /* DataModel.swift */; };
-		88B75A002BF34E30002258C7 /* FireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FF2BF34E30002258C7 /* FireStore.swift */; };
-		F146F9A5C768067254DF8F7F /* Pods_BBangChinJa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C47D0821A11612D8BCB81 /* Pods_BBangChinJa.framework */; };
 		1A8C29DA2BF3301F000DE695 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C29D92BF3301F000DE695 /* NetworkManager.swift */; };
 		1A8C29DB2BF336E1000DE695 /* BreadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C297E2BF1B7D7000DE695 /* BreadModel.swift */; };
 		1A8C29DC2BF33888000DE695 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29C42BF1BD62000DE695 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -67,6 +62,10 @@
 		1A8C29FA2C0460B1000DE695 /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29F92C0460B1000DE695 /* KakaoSDKTalk */; };
 		1A8C29FC2C0460B1000DE695 /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29FB2C0460B1000DE695 /* KakaoSDKTemplate */; };
 		1A8C29FE2C0460B1000DE695 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8C29FD2C0460B1000DE695 /* KakaoSDKUser */; };
+		881F80292BFB4161001993C7 /* FireStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F80282BFB4161001993C7 /* FireStorage.swift */; };
+		8880CF8D2BFDEB2400DE2414 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8880CF8C2BFDEB2400DE2414 /* LoginViewController.swift */; };
+		88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FD2BF349CC002258C7 /* DataModel.swift */; };
+		88B75A002BF34E30002258C7 /* FireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B759FF2BF34E30002258C7 /* FireStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -508,7 +507,6 @@
 				881F80292BFB4161001993C7 /* FireStorage.swift in Sources */,
 				1A8C29D42BF213B8000DE695 /* MangoDetailViewController.swift in Sources */,
 				1A8C29CD2BF21188000DE695 /* BreadViewController.swift in Sources */,
-				1A8C297F2BF1B7D7000DE695 /* BreadModel.swift in Sources */,
 				88B759FE2BF349CC002258C7 /* DataModel.swift in Sources */,
 				1A8C29CF2BF211B0000DE695 /* RateViewController.swift in Sources */,
 				1A8C29912BF1B89A000DE695 /* BreadViewModel.swift in Sources */,
@@ -657,8 +655,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BBangChinJa/BBangChinJa.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BBangChinJa/Info.plist;
@@ -674,6 +673,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DongYoung.BBangChinJa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,8 +687,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BBangChinJa/BBangChinJa.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BBangChinJa/Info.plist;
@@ -704,6 +705,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DongYoung.BBangChinJa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

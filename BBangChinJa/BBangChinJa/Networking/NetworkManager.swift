@@ -10,32 +10,30 @@ import Foundation
 
 class NetworkManager {
 	static let shared = NetworkManager()
-	let searchId = Bundle.main.searchId
-	let searchSecret = Bundle.main.searchSecret
+	let kakaoId = Bundle.main.kakao
 	
-	func searchBakeries(completion: @escaping (Result<Data, Error>) -> Void) {
-		let query = "글루텐 프리 빵"
-		let urlString = "https://openapi.naver.com/v1/search/local.json?query=\(query)&display=10&start=1&sort=random"
-		
-		let headers: HTTPHeaders = [
-			"X-Naver-Client-Id": "searchId",
-			"X-Naver-Client-Secret": "searchSecret"
-		]
-		
-		AF.request(urlString, headers: headers).responseData { response in
-			switch response.result {
-			case .success(let data):
-				do {
-					let json = try JSONSerialization.jsonObject(with: data, options: [])
-					print("Data fetched successfully:", json)
-				} catch {
-					print("Error parsing JSON:", error)
+	func searchBakeries(latitude: Double, longitude: Double, completion: @escaping (Result<Data, Error>) -> Void) {
+			let query = "빵집"
+			let urlString = "https://dapi.kakao.com/v2/local/search/keyword.json?page=1&size=15&sort=distance&query=\(query)&x=\(longitude)&y=\(latitude)&radius=5000"
+			
+			let headers: HTTPHeaders = [
+				"Authorization": "KakaoAK \(kakaoId)"
+			]
+			
+			AF.request(urlString, headers: headers).responseData { response in
+				switch response.result {
+				case .success(let data):
+					do {
+						let json = try JSONSerialization.jsonObject(with: data, options: [])
+						print("Data fetched successfully:", json)
+					} catch {
+						print("Error parsing JSON:", error)
+					}
+					completion(.success(data))
+				case .failure(let error):
+					print("Error fetching data:", error)
+					completion(.failure(error))
 				}
-				completion(.success(data))
-			case .failure(let error):
-				print("Error fetching data:", error)
-				completion(.failure(error))
 			}
 		}
 	}
-}

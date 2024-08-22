@@ -7,12 +7,12 @@
 import Foundation
 
 struct NaverSearchResponse: Codable {
-	let items: [Bread]
+	let documents: [Bread]
 }
 
 struct Bread: Codable {
-	let title: String
-	let address: String
-	let mapx: String
-	let mapy: String
+	let place_name: String
+	let address_name: String
+	let x: String
+	let y: String
 }

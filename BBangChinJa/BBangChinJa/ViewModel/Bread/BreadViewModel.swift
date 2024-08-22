@@ -11,13 +11,13 @@ import NMapsMap
 class BreadViewModel {
 	var naverMapView: NMFNaverMapView!
 	var bakeries: [Bread] = []
-	
-	func fetchBakeries(completion: @escaping ([NMFMarker]?, Error?) -> Void) {
-		NetworkManager.shared.searchBakeries { [weak self] result in
+
+	func fetchBakeries(latitude: Double, longitude: Double, completion: @escaping ([NMFMarker]?, Error?) -> Void) {
+		NetworkManager.shared.searchBakeries(latitude: latitude, longitude: longitude) { result in
 			switch result {
 			case .success(let data):
-				if let bakeries = self?.createBakeries(from: data) {
-					let markers = self?.createMarkers(from: bakeries)
+				if let bakeries = self.createBakeries(from: data) {
+					let markers = self.createMarkers(from: bakeries)
 					completion(markers, nil)
 				} else {
 					completion(nil, NSError(domain: "DecodingError", code: -1, userInfo: nil))
@@ -32,7 +32,7 @@ class BreadViewModel {
 		do {
 			let decoder = JSONDecoder()
 			let result = try decoder.decode(NaverSearchResponse.self, from: data)
-			return result.items
+			return result.documents
 		} catch {
 			print("JSON decoding error:", error)
 			return nil
@@ -42,18 +42,19 @@ class BreadViewModel {
 	private func createMarkers(from bakeries: [Bread]) -> [NMFMarker] {
 		var markers: [NMFMarker] = []
 		for bread in bakeries {
-			let latitude = Double(bread.mapy)! / 10_000_000
-			let longitude = Double(bread.mapx)! / 10_000_000
+			let latitude = Double(bread.y)!
+			let longitude = Double(bread.x)!
 			let marker = NMFMarker()
 			let infoWindow = NMFInfoWindow()
 			let dataSource = NMFInfoWindowDefaultTextSource.data()
 			
-			dataSource.title = bread.address
+			dataSource.title = bread.address_name
 			infoWindow.dataSource = dataSource
 			marker.position = NMGLatLng(lat: latitude, lng: longitude)
+			marker.iconImage = NMFOverlayImage(name: "Bread")
 			
 			// 마커에 제목 추가
-			marker.captionText = bread.title
+			marker.captionText = bread.place_name
 			
 			// 탭 이벤트 처리
 			let handler = { (overlay: NMFOverlay) -> Bool in
